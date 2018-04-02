@@ -1,0 +1,32 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+.label {
+border: 1px solid black;
+height: 65px;
+}
+
+.user {
+border: 1px solid black;
+height: 50px;
+}
+
+.pass {
+border: 1px solid black;
+height: 50px;
+}
+
+.tombol {
+border: 1px solid black;
+height: 50px;
+}

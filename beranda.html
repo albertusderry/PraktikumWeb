@@ -3,45 +3,45 @@
 <head>
 	<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/beranda.css">
 	<title>Beranda</title>
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-	  <a class="navbar-brand" href="#">Navbar</a>
-	  <img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
-
-	  <div class="collapse navbar-collapse" >
-	    <ul class="navbar-nav mr-auto">
-	      <li class="nav-item active">
-	        <a class="nav-link" href="beranda.html#">Home <span class="sr-only">(current)</span></a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="#">Link</a>
-	      </li>
-	      <li class="nav-item dropdown">
-	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	          Dropdown
-	        </a>
-	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-	          <a class="dropdown-item" href="#">Action</a>
-	          <a class="dropdown-item" href="#">Another action</a>
-	          <div class="dropdown-divider"></div>
-	          <a class="dropdown-item" href="#">Something else here</a>
-	        </div>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link disabled" href="#">Disabled</a>
-	      </li>
-	    </ul>
-	    <form class="form-inline my-2 my-lg-0">
-	      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-	      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-	    </form>
-	  </div>
-	</nav>	
+	<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+		<img src="img/online-store.png" width="40" height="40">
+	      	<h5 class="my-0 mr-md-auto font-weight-normal">&nbsp;BeriPandang</h5>
+	      	<nav class="my-2 my-md-0 mr-md-3">
+	        		<a class="p-2 text-dark" href="#">Hi, Mas!</a>
+	      	</nav>
+	      	<a class="btn btn-outline-primary" href="#">Troli</a>
+    	</div>	
+    	<div class="jumbotron jumbotron-fluid">
+		<div class="container">
+			<h1 class="display-3 center-text">Selamat Datang, Mas!</h1>
+			<br>
+			<p class="lead center-text">BeriPandang adalah toko online kacamata. Dibangun dan diperuntukkan untuk umum, dari balita yang baru terdiagnosa dengan miopia, anak remaja yang ingin tampil gaya, hingga mantan atlit kejuaraan dunia yang sudah kesusahan membaca korannya.
+			BeriPandang akan menyediakan Anda sejuta pilihan kacamata terjangkau, sejauh mata memandang. Segera belanja di BeriPandang!</p>
+		</div>
+	</div>
 	<div class="container">
-		
+		<table class="table" id="mytab1">
+			<thead>
+				<td>No</td>
+				<td>Gambar</td>
+				<td class="center-text">Deskripsi</td>
+			</thead>
+			<tr>
+				<td class="cell"></td>
+				<td>asd</td>
+			</tr>
+		</table>
 	</div>
 
+<script type="text/javascript">
+	var table = document.getElementById("mytab1");
+	for (var i = 0, cell; cell = table.cells[i]; i++) {
+     //iterate through cells
+     //cells would be accessed using the "cell" variable assigned in the for loop
+}</script>
 </body>
 </html>

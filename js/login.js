@@ -10,7 +10,7 @@ function validate() {
 	}
 	else {
 		attempt --;
-		alert ("Kesempatan salah Anda tinggal " +attempt+ " kali. Gunakan dengan bijak.")
+		alert ("Login salah. Kesempatan salah Anda tinggal " +attempt+ " kali. Gunakan dengan bijak.")
 		if (attempt == 0){
 			document.getElementById("username").disabled = true;
 			document.getElementById("password").disabled = true;

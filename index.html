@@ -5,18 +5,18 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<title>Login, Mas</title>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
 </head>
 <body>
 	<div class="container">	
-		<form class="form-signin">
+		<form class="form-signin" id="login" method="post" name="login-form">
 			<h2 class="form-signin-heading">Monggo <i>login,</i> Mas</h2>
-			<input type="username" class="form-control" placeholder="Nama Pengguna" required autofocus>
-			<input type="password" class="form-control" placeholder="Kata Sandi" required>
-			<button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+			<input type="text" name="username" id="username" class="form-control" placeholder="Nama Pengguna" required autofocus> 
+			<input type="password" name="password" id="password" class="form-control" placeholder="Kata Sandi" required>
+			<button class="btn btn-lg btn-primary btn-block" value="Login" id="submit" onclick="validate()">Login</button>
 		</form>
 	</div>
-<script type="text/javascript">
-	
-</script>
+<script type="text/javascript" src="js/login.js"></script>
 </body>
-</html>>
+</html>	

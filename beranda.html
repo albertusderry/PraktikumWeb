@@ -4,38 +4,17 @@
 	<title>Beranda</title>
 	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 	<meta content="utf-8" http-equiv="encoding">
+	<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+	<!-- <script type="text/javascript" src="js/chart.js"></script> -->
+	<!-- <script type="text/javascript" src="js/chart.bundle.js"></script> -->
+
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/beranda.css">
 	<link rel="icon" href="img/online-store.png">
-	<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
-	<script type="text/javascript" src="js/bootstrap.js"></script>
-	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-	<script type="text/javascript">
-	      google.charts.load('current', {'packages':['corechart']});
-	      google.charts.setOnLoadCallback(drawChart);
-
-	      function drawChart() {
-
-	        var data = google.visualization.arrayToDataTable([
-	          ['Task', 'Hours per Day'],
-	          ['Work',     11],
-	          ['Eat',      2],
-	          ['Commute',  2],
-	          ['Watch TV', 2],
-	          ['Sleep',    7]
-	        ]);
-
-	        var options = {
-	          title: 'My Daily Activities',
-	          is3D: true,
-	        };
-
-	        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-	        chart.draw(data, options);
-	      }
-	</script>
-
+	
+	
 </head>
 <body>
 	<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
@@ -44,6 +23,7 @@
 	      	<nav class="my-2 my-md-0 mr-md-3">
 	        		<a class="p-2 text-dark" href="#modalChart" data-toggle="modal">Hi, Mas!</a>
 	      	</nav>
+	      	<a class="btn btn-light" href="barang.html">Daftar barang</a>
 	      	<a class="btn btn-outline-primary">Troli</a>
 		
     	</div>
@@ -52,13 +32,13 @@
 		<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="modalChart">Grafik mengenai pengguna yang login selama 24 jam terakhir</h5>
+				<h5 class="modal-title" id="modalChart">Grafik lama pengguna login pada hari ini</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
 			<div class="modal-body">
-				<div class="piechart" style="width: 900px; height: 500px;"></div>
+				<canvas id="chartUser" width="400" height="400"></canvas>
 			</div>
 		</div>
 		</div>
@@ -73,9 +53,9 @@
 			BeriPandang akan menyediakan Anda sejuta pilihan kacamata terjangkau, sejauh mata memandang. Segera belanja di BeriPandang!</p>
 		</div>
 	</div>
-	<div class="piechart" style="width: 900px; height: 500px;"></div>
 	<div class="container">
-		<table class="table" id="mytab1">
+		<button class="btn btn-outline-primary" id="myButton" type="button">AAA</button>
+		<table class="table" id="addNodeTable">
 			<thead>
 				<td>No</td>
 				<td>Gambar</td>
@@ -88,11 +68,38 @@
 		</table>
 	</div>
 
-<script type="text/javascript">
-	var table = document.getElementById("mytab1");
-	for (var i = 0, cell; cell = table.cells[i]; i++) {
-     //iterate through cells
-     //cells would be accessed using the "cell" variable assigned in the for loop
-}</script>
+	<script>
+	var ctx = document.getElementById('chartUser').getContext('2d');
+	var chart = new Chart(ctx, {
+	    type: 'line',
+
+	    data: {
+	        labels: ["Padamu213", "FakhrulAhmad", "IsyanaAndalan", "DaraBiru", "Mas"],
+	        datasets: [{
+	            label: "Lama pengguna login (dalam menit)",
+	            backgroundColor: 'rgb(255, 99, 132)',
+	            borderColor: 'rgb(255, 99, 132)',
+	            data: [30, 120, 40, 55, 60],
+	        }]
+	    },
+
+	    // Configuration options go here
+	    options: {}
+	});
+	</script>
+	<script>
+		$("#myButton").click(function ()
+{
+    var test = $('<button/>',
+    {
+        text: 'Test',
+        click: function () { alert('hi'); }
+    });
+
+    var parent = $('<tr><td></td></tr>').children().append(test).end();
+
+    $("#addNodeTable tr:last").before(parent);
+});
+	</script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Daftar Barang | BeriPandang</title>
+	<title>Pesan Barang | BeriPandang</title>
 	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 	<meta content="utf-8" http-equiv="encoding">
 	<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
@@ -21,9 +21,9 @@
 	        		<a class="p-2 text-dark" href="#modalChart" data-toggle="modal">Hi, Mas!</a>
 	      	</nav>
 	      	<nav class="my-2 my-md-0 mr-md-3">
-	      		<a class="btn btn-light" href="barang.html#">Daftar barang</a>
+	      		<a class="btn btn-light" href="barang.html">Daftar barang</a>
 	      	</nav>
-	      	<a class="btn btn-outline-primary" href="pesan.html">Pesan Sekarang!</a>
+	      	<a class="btn btn-outline-primary" href="pesan.html#">Pesan Sekarang!</a>
     	</div>
 
     	<div class="modal fade modalChart" id="modalChart" tabindex="-1" role="dialog" aria-labelledby="modalChart" aria-hidden="true">
@@ -42,9 +42,9 @@
 		</div>
 	</div>
 
-    	<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-	      <h1 class="display-4">Daftar Harga</h1>
-	      <p class="lead">Berikut daftar barang beserta keunggulan di BeriPandang. Berikan pikiran Anda sejenak untuk mempertimbangkan produk kami... KARENA SEMUANYA BAGUS!</p>
+	<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+	      <h1 class="display-4">Pemesanan</h1>
+	      <p class="lead">Mari pesan kacamata sesuai mata Anda yang sering membaca. Tingkatkan budaya literasi bangsa. Plus kan baca, Minus kan mata, Menguntungkan kita!</p>
    	</div>
 	 <div class="container">
 	      <div class="card-deck mb-3 text-center">
@@ -55,13 +55,7 @@
 	          <div class="card-body">
 	          	<img src="img/engrvr.jpg" width="200" height="200">
 	            <h1 class="card-title pricing-card-title">750k <small class="text-muted">IDR</small></h1>
-	            <ul class="list-unstyled mt-3 mb-4">
-	              <li>Terbaru</li>
-	              <li>Waterproof IP68</li>
-	              <li>Dilengkapi dengan teknologi ABS</li>
-	              <li>#MendingYangIni</li>
-	            </ul>
-	            <!-- <button type="button" class="btn btn-lg btn-block btn-primary" id="btn-engrvr">Tambahkan ke troli</button> -->
+	            <button type="button" class="btn btn-lg btn-block btn-primary" id="btn-engrvr">Tambahkan ke troli</button>
 	          </div>
 	        </div>
 	        <div class="card mb-4 box-shadow">
@@ -71,13 +65,7 @@
 	          <div class="card-body">
 	          	<img src="img/krsltn.jpg" width="200" height="200">
 	            <h1 class="card-title pricing-card-title">900k <small class="text-muted">IDR</small></h1>
-	            <ul class="list-unstyled mt-3 mb-4">
-	              <li>Korea punya</li>
-	              <li>Tipis dan ringan</li>
-	              <li>Dilengkapi dengan teknologi ISS</li>
-	              <li>Biar ganteng</li>
-	            </ul>
-	            <!-- <button type="button" class="btn btn-lg btn-block btn-primary" id="btn-krsltn">Tambahkan ke troli</button> -->
+	            <button type="button" class="btn btn-lg btn-block btn-primary" id="btn-krsltn">Tambahkan ke troli</button>
 	          </div>
 	        </div>
 	        <div class="card mb-4 box-shadow" >
@@ -87,17 +75,74 @@
 	          <div class="card-body">
 	          	<img src="img/lvstvs.jpg" width="200" height="200">
 	            <h1 class="card-title pricing-card-title">850k <small class="text-muted">IDR</small></h1>
-	            <ul class="list-unstyled mt-3 mb-4">
-	              <li>BESAR</li>
-	              <li>Motif macan tutul, rawr XD</li>
-	              <li>Frame kuat</li>
-	              <li>Menarik perhatian</li>
-	            </ul>
-	            <!-- <button type="button" class="btn btn-lg btn-block btn-primary" id="btn-lvstvs">Tambahkan ke troli</button> -->
+	            <button type="button" class="btn btn-lg btn-block btn-primary" id="btn-lvstvs">Tambahkan ke troli</button>
 	          </div>
 	        </div>
 	  </div>
-	  <script>
+
+	  <hr>
+
+	  <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+	      <h1 class="display-4">Troli</h1>
+	      <p class="lead">Berikut adalah troli Anda, keranjang belanja di BeriPandang. Jangan lupa meminta nota saat pembayaran. (Maksimal pemesanan 2 buah setiap unit )</p>
+   	</div>
+	<div class="container">
+	<div class="card-deck mb-3 text-center" id="yukappend">
+
+	</div>
+	</div>
+	<script>
+	$("#btn-engrvr").click(function ()
+	{
+	    var engrvr = $(`<div class="card mb-4 box-shadow">
+	          <div class="card-header">
+	            <h4 class="my-0 font-weight-normal">ENGRVR</h4>
+	          </div>
+	          <div class="card-body">
+	          	<img src="img/engrvr.jpg" width="200" height="200">
+	            <h1 class="card-title pricing-card-title">750k <small class="text-muted">IDR</small></h1>
+	           
+	          </div>
+	        </div>`);
+
+	    $("#yukappend").append(engrvr);
+	});
+	</script>
+	<script>
+	$("#btn-krsltn").click(function ()
+	{
+	    var krsltn = $(` <div class="card mb-4 box-shadow">
+	          <div class="card-header">
+	            <h4 class="my-0 font-weight-normal">KRSLTN</h4>
+	          </div>
+	          <div class="card-body">
+	          	<img src="img/krsltn.jpg" width="200" height="200">
+	            <h1 class="card-title pricing-card-title">900k <small class="text-muted">IDR</small></h1>
+	      
+	          </div>
+	        </div>`);
+
+	    $("#yukappend").append(krsltn);
+	});
+	</script>
+	<script>
+	$("#btn-lvstvs").click(function ()
+	{
+	    var lvstvs = $(` <div class="card mb-4 box-shadow" >
+	          <div class="card-header">
+	            <h4 class="my-0 font-weight-normal">LVSTVS</h4>
+	          </div>
+	          <div class="card-body">
+	          	<img src="img/lvstvs.jpg" width="200" height="200">
+	            <h1 class="card-title pricing-card-title">850k <small class="text-muted">IDR</small></h1>
+	          </div>
+	        </div>`);
+
+	    $("#yukappend").append(for($i=1; $i<=10; $i++){ lvstvs; if($i==2){ break; } })
+	    return 
+	});
+	</script>
+	<script>
 	var ctx = document.getElementById('chartUser').getContext('2d');
 	var chart = new Chart(ctx, {
 	    type: 'line',

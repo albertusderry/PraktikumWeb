@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Beranda</title>
+	<title>Beranda | BeriPandang</title>
 	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 	<meta content="utf-8" http-equiv="encoding">
 	<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
@@ -12,20 +12,24 @@
 
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/beranda.css">
+	<link rel="stylesheet" type="text/css" href="css/pricing.css">
 	<link rel="icon" href="img/online-store.png">
 	
 	
 </head>
 <body>
 	<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-		<img src="img/online-store.png" width="40" height="40">
+		<a href="beranda.html#">
+			<img src="img/online-store.png" width="40" height="40">
+		</a>
 	      	<h5 class="my-0 mr-md-auto font-weight-normal">&nbsp;BeriPandang</h5>
 	      	<nav class="my-2 my-md-0 mr-md-3">
 	        		<a class="p-2 text-dark" href="#modalChart" data-toggle="modal">Hi, Mas!</a>
 	      	</nav>
-	      	<a class="btn btn-light" href="barang.html">Daftar barang</a>
-	      	<a class="btn btn-outline-primary">Troli</a>
-		
+	      	<nav class="my-2 my-md-0 mr-md-3">
+	      		<a class="btn btn-light" href="barang.html">Daftar barang</a>
+	      	</nav>
+	      	<a class="btn btn-outline-primary" href="pesan.html">Pesan Sekarang!</a>
     	</div>
 	
 	<div class="modal fade modalChart" id="modalChart" tabindex="-1" role="dialog" aria-labelledby="modalChart" aria-hidden="true">
@@ -44,15 +48,15 @@
 		</div>
 	</div>
 
-	
-    	<div class="jumbotron jumbotron-fluid">
+	<br>
+    	<!-- <div class="jumbotron jumbotron-fluid"> -->
 		<div class="container">
 			<h1 class="display-3 center-text">Selamat Datang, Mas!</h1>
 			<br>
 			<p class="lead center-text">BeriPandang adalah toko online kacamata. Dibangun dan diperuntukkan untuk umum, dari balita yang baru terdiagnosa dengan miopia, anak remaja yang ingin tampil gaya, hingga mantan atlit kejuaraan dunia yang sudah kesusahan membaca korannya.
 			BeriPandang akan menyediakan Anda sejuta pilihan kacamata terjangkau, sejauh mata memandang. Segera belanja di BeriPandang!</p>
 		</div>
-	</div>
+	<!-- </div> -->
 	<div class="container">
 		<button class="btn btn-outline-primary" id="myButton" type="button">AAA</button>
 		<table class="table" id="addNodeTable">
@@ -86,20 +90,6 @@
 	    // Configuration options go here
 	    options: {}
 	});
-	</script>
-	<script>
-		$("#myButton").click(function ()
-{
-    var test = $('<button/>',
-    {
-        text: 'Test',
-        click: function () { alert('hi'); }
-    });
-
-    var parent = $('<tr><td></td></tr>').children().append(test).end();
-
-    $("#addNodeTable tr:last").before(parent);
-});
 	</script>
 </body>
 </html>

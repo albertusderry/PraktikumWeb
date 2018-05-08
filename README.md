@@ -10,7 +10,3 @@ Toko Online Kacamata </br>
 ### Login info </br>
 Username **Gambino** </br>
 Password **fresh** </br>
-
-### Info kode "if" </br>
-1. Login (login.js) </br>
-2. Attempt login (login.js) </br>
